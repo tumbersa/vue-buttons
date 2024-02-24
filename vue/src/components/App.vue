@@ -1,16 +1,7 @@
 <template>
   <div>
     <div>
-      <NinthButton 
-          backgroundColor="blue" 
-          borderColor="orange" 
-          textColor="white"
-          topPadding="30"
-          bottomPadding="10"
-          leftPadding="10"
-          rightPadding="22">
-          Click
-      </NinthButton>
+      <ButtonGrid/>
     </div>
     
     <RouterView />
@@ -20,12 +11,12 @@
 
 <script>
 import ModalContainer from "@/components/parts/ModalContainer";
-import NinthButton from "./ui/buttons/NinthButton.vue";
+import ButtonGrid from './ui/grids/ButtonGrid.vue';
 
 export default {
   components: {
     ModalContainer,
-    NinthButton
+    ButtonGrid
   }
 }
 </script>
