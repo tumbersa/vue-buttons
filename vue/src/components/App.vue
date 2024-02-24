@@ -1,5 +1,18 @@
 <template>
   <div>
+    <div>
+      <NinthButton 
+          backgroundColor="blue" 
+          borderColor="orange" 
+          textColor="white"
+          topPadding="30"
+          bottomPadding="10"
+          leftPadding="10"
+          rightPadding="22">
+          Click
+      </NinthButton>
+    </div>
+    
     <RouterView />
     <ModalContainer />
   </div>
@@ -7,10 +20,12 @@
 
 <script>
 import ModalContainer from "@/components/parts/ModalContainer";
+import NinthButton from "./ui/buttons/NinthButton.vue";
 
 export default {
   components: {
-    ModalContainer
+    ModalContainer,
+    NinthButton
   }
 }
 </script>
