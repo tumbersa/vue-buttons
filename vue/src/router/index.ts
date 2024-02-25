@@ -13,7 +13,7 @@ const routes = [
     component: HomePage
   },
   {
-    path: '/',
+    path: '/button_9',
     name: RouteNames.BUTTONS,
     component: Button9thPage
   }
