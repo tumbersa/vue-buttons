@@ -1,9 +1,9 @@
 <template>
-  <button :style="buttonStyle">
-    <slot></slot>
+  <button class="ninth-button" :style="buttonStyle">
+    <slot/>
   </button>
 </template>
-  
+
 <script>
 export default {
   name: 'NinthButton',
@@ -43,18 +43,6 @@ export default {
         backgroundColor: this.backgroundColor,
         borderColor: this.borderColor,
         color: this.textColor,
-        height: '7vh',
-        width: '22vw',
-        borderWidth: '2px',
-        borderStyle: 'solid',
-        borderRadius: '25px',
-        padding: '10px',
-        fontSize: '14px',
-        textAlign: 'center',
-        textTransform: 'uppercase',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
         margin: `${this.topIndent} ${this.rightIndent} ${this.bottomIndent} ${this.leftIndent}`
       };
     }
@@ -62,4 +50,19 @@ export default {
 }
 </script>
 
-<style scoped/>
+<style scoped>
+.ninth-button {
+  height: 7vh;
+  width: 22vw;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 25px;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>
