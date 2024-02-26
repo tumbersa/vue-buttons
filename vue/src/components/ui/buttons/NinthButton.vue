@@ -38,7 +38,7 @@ export default {
     }
   },
   computed: {
-    buttonStyle() {
+    buttonStyle () {
       return {
         backgroundColor: this.backgroundColor,
         borderColor: this.borderColor,
