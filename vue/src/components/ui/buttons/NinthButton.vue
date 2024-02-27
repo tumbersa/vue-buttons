@@ -1,8 +1,8 @@
 <template>
   <button 
     :class="['ninth-button', { 'primary': type === 'primary', 'filled': fill }]"
-    :data-hover-text="'Button'"
-    :data-hover-text-hover="'Hover'"
+    :data-text = "'Button'"
+    :data-text-hover = "'Hover'"
   >
   </button>
 </template>
@@ -40,12 +40,13 @@ export default {
   margin-top: 20px;
   margin-left: 20px;
 }
+
 &::after {
-  content: attr(data-hover-text);
+  content: attr(data-text);
 }
 
 &:hover::after {
-  content: attr(data-hover-text-hover); 
+  content: attr(data-text-hover); 
 }
 
 &:not(.filled).primary {
