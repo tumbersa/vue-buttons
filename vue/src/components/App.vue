@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Button9thPage/>
     <RouterView />
     <ModalContainer />
   </div>
@@ -8,12 +7,10 @@
 
 <script>
 import ModalContainer from "@/components/parts/ModalContainer";
-import Button9thPage from "./pages/Button9thPage.vue";
 
 export default {
   components: {
-    ModalContainer,
-    Button9thPage
+    ModalContainer
   }
 }
 </script>
