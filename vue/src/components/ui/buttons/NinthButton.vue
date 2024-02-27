@@ -1,8 +1,9 @@
 <template>
-  <button :class="'ninth-button'" @mouseover="hoverEffect" @mouseleave="resetEffect">
-    <slot>
-      button
-    </slot>
+  <button 
+    :class="['ninth-button', { 'primary': type === 'primary', 'filled': fill }]"
+    :data-hover-text="'Button'"
+    :data-hover-text-hover="'Hover'"
+  >
   </button>
 </template>
 
@@ -17,59 +18,6 @@ export default {
     fill: {
       type: Boolean,
       default: false
-    }
-  },
-  mounted() {
-    this.resetEffect();
-  },
-  methods: {
-    hoverEffect() {
-      this.$el.innerText = "hover"
-      if (this.fill) {
-        if (this.type === "primary") {
-          this.$el.style.backgroundColor = 'rgb(51, 51, 51)';
-          this.$el.style.borderColor = 'rgb(166, 88, 46)';
-          this.$el.style.color = 'rgb(166, 88, 46)';
-        } else {
-          this.$el.style.backgroundColor = 'rgb(222, 222, 222)';
-          this.$el.style.borderColor = 'rgb(222, 222, 222)';
-          this.$el.style.color = 'rgb(50, 50, 50)';
-        }
-      } else {
-        if (this.type === "primary") {
-          this.$el.style.backgroundColor = 'rgb(253, 106, 2)';
-          this.$el.style.borderColor = 'rgb(253, 106, 2)';
-          this.$el.style.color = 'rgb(255, 255, 255)';
-        } else {
-          this.$el.style.backgroundColor = 'rgb(51, 51, 51)';
-          this.$el.style.borderColor = 'rgb(126, 126, 126)';
-          this.$el.style.color = 'rgb(255, 255, 255)';
-        }
-      }
-    },
-    resetEffect() {
-      this.$el.innerText = "button"
-      if (this.fill) {
-        if (this.type === "primary") {
-          this.$el.style.backgroundColor = 'rgb(253, 106, 2)';
-          this.$el.style.borderColor = 'rgb(253, 106, 2)';
-          this.$el.style.color = 'rgb(255, 255, 255)';
-        } else {
-          this.$el.style.backgroundColor = 'rgb(255, 255, 255)';
-          this.$el.style.borderColor = 'rgb(255, 255, 255)';
-          this.$el.style.color = 'rgb(85, 85, 85)';
-        }
-      } else {
-        if (this.type === "primary") {
-          this.$el.style.backgroundColor = 'rgb(51, 51, 51)';
-          this.$el.style.borderColor = 'rgb(166, 88, 46)';
-          this.$el.style.color = 'rgb(166, 88, 46)';
-        } else {
-          this.$el.style.backgroundColor = 'rgb(51, 51, 51)';
-          this.$el.style.borderColor = 'rgb(68, 68, 68)';
-          this.$el.style.color = 'rgb(255, 255, 255)';
-        }
-      }
     }
   }
 }
@@ -91,9 +39,64 @@ export default {
   justify-content: center;
   margin-top: 20px;
   margin-left: 20px;
+}
 
-  &:hover {
-    cursor: pointer;
-  }
+.ninth-button::after {
+  content: attr(data-hover-text);
+}
+
+.ninth-button:hover::after {
+  content: attr(data-hover-text-hover); 
+}
+
+.ninth-button:not(.filled).primary {
+  background-color: rgb(51, 51, 51);
+  border-color: rgb(166, 88, 46);
+  color: rgb(166, 88, 46);
+}
+
+.ninth-button.filled.primary {
+  background-color: rgb(253, 106, 2);
+  border-color: rgb(253, 106, 2);
+  color: rgb(255, 255, 255);
+}
+
+.ninth-button.filled:not(.primary) {
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(255, 255, 255);
+  color: rgb(85, 85, 85);
+}
+
+.ninth-button:not(.filled):not(.primary) {
+  background-color: rgb(51, 51, 51);
+  border-color: rgb(68, 68, 68);
+  color: rgb(255, 255, 255);
+}
+
+.ninth-button:hover {
+  cursor: pointer;
+}
+
+.ninth-button:hover:not(.filled):not(.primary) {
+  background-color: rgb(51, 51, 51);
+  border-color: rgb(126, 126, 126);
+  color: rgb(255, 255, 255);
+}
+.ninth-button:hover:not(.filled).primary {
+  background-color: rgb(253, 106, 2);
+  border-color: rgb(253, 106, 2);
+  color: rgb(255, 255, 255);
+}
+
+.ninth-button:hover.filled:not(.primary) {
+  background-color: rgb(222, 222, 222);
+  border-color: rgb(222, 222, 222);
+  color: rgb(50, 50, 50);
+}
+
+.ninth-button:hover.filled.primary {
+  background-color: rgb(51, 51, 51);
+  border-color: rgb(166, 88, 46);
+  color: rgb(166, 88, 46);
 }
 </style>
