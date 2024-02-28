@@ -1,7 +1,7 @@
 <template>
   <div class="button-9th-page">
     <NinthButton type="default" :fill="false">
-    low
+    button
     </NinthButton>
     <NinthButton type="primary" :fill="false"/>
     <NinthButton type="default" :fill="true"/>

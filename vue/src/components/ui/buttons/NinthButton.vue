@@ -2,8 +2,6 @@
   <button 
     class = "ninth-button"
     :class = "{ 'primary': type === 'primary', 'filled': fill }"
-    @mouseover = "changeText"
-    @mouseleave = "resetText"
   >
     <slot>button</slot>
   </button>
@@ -20,18 +18,6 @@ export default {
     fill: {
       type: Boolean,
       default: false
-    }
-  },
-  methods: {
-    changeText() {
-      this.$el.textContent = "hover";
-    },
-    resetText() {
-      if (this.$slots.default && this.$slots.default[0]) {
-        this.$el.textContent = this.$slots.default[0].text;
-      } else {
-        this.$el.textContent = "button";
-      }
     }
   }
 }
@@ -80,7 +66,6 @@ export default {
 
   &:hover {
     cursor: pointer;
-    content: 'hover';
   }
 
   &:hover:not(.filled):not(.primary) {
