@@ -1,6 +1,8 @@
 <template>
   <div class="button-9th-page">
-    <NinthButton type="default" :fill="false"/>
+    <NinthButton type="default" :fill="false">
+    low
+    </NinthButton>
     <NinthButton type="primary" :fill="false"/>
     <NinthButton type="default" :fill="true"/>
     <NinthButton type="primary" :fill="true"/>

@@ -2,9 +2,11 @@
   <button 
     class = "ninth-button"
     :class = "{ 'primary': type === 'primary', 'filled': fill }"
-    :data-text = "'Button'"
-    :data-text-hover = "'Hover'"
-  />
+    @mouseover = "changeText"
+    @mouseleave = "resetText"
+  >
+    <slot>button</slot>
+  </button>
 </template>
 
 <script>
@@ -18,6 +20,18 @@ export default {
     fill: {
       type: Boolean,
       default: false
+    }
+  },
+  methods: {
+    changeText() {
+      this.$el.textContent = "hover";
+    },
+    resetText() {
+      if (this.$slots.default && this.$slots.default[0]) {
+        this.$el.textContent = this.$slots.default[0].text;
+      } else {
+        this.$el.textContent = "button";
+      }
     }
   }
 }
@@ -40,64 +54,57 @@ export default {
   margin-top: 20px;
   margin-left: 20px;
 
-  &::after {
-    content: attr(data-text);
-  }
-
-  &:hover::after {
-    content: attr(data-text-hover);
-  }
-
   &:not(.filled).primary {
-    background-color: rgb(51, 51, 51);
-    border-color: rgb(166, 88, 46);
-    color: rgb(166, 88, 46);
+    background-color: #333333;
+    border-color: #a6582e;
+    color: #a6582e;
   }
 
   &.filled.primary {
-    background-color: rgb(253, 106, 2);
-    border-color: rgb(253, 106, 2);
-    color: rgb(255, 255, 255);
+    background-color: #fd6a02;
+    border-color: #fd6a02;
+    color: #ffffff;
   }
 
   &.filled:not(.primary) {
-    background-color: rgb(255, 255, 255);
-    border-color: rgb(255, 255, 255);
-    color: rgb(85, 85, 85);
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #555555;
   }
 
   &:not(.filled):not(.primary) {
-    background-color: rgb(51, 51, 51);
-    border-color: rgb(68, 68, 68);
-    color: rgb(255, 255, 255);
+    background-color: #333333;
+    border-color: #444444;
+    color: #ffffff;
   }
 
   &:hover {
     cursor: pointer;
+    content: 'hover';
   }
 
   &:hover:not(.filled):not(.primary) {
-    background-color: rgb(51, 51, 51);
-    border-color: rgb(126, 126, 126);
-    color: rgb(255, 255, 255);
+    background-color: #333333;
+    border-color: #7e7e7e;
+    color: #ffffff;
   }
 
   &:hover:not(.filled).primary {
-    background-color: rgb(253, 106, 2);
-    border-color: rgb(253, 106, 2);
-    color: rgb(255, 255, 255);
+    background-color: #fd6a02;
+    border-color: #fd6a02;
+    color: #ffffff;
   }
 
   &:hover.filled:not(.primary) {
-    background-color: rgb(222, 222, 222);
-    border-color: rgb(222, 222, 222);
-    color: rgb(50, 50, 50);
+    background-color: #dedede;
+    border-color: #dedede;
+    color: #333333;
   }
 
   &:hover.filled.primary {
-    background-color: rgb(51, 51, 51);
-    border-color: rgb(166, 88, 46);
-    color: rgb(166, 88, 46);
+    background-color: #333333;
+    border-color: #a6582e;
+    color: #a6582e;
   }
 }
 </style>
