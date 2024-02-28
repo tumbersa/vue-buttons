@@ -1,10 +1,10 @@
 <template>
   <button 
-    :class="['ninth-button', { 'primary': type === 'primary', 'filled': fill }]"
+    class = "ninth-button"
+    :class = "{ 'primary': type === 'primary', 'filled': fill }"
     :data-text = "'Button'"
     :data-text-hover = "'Hover'"
-  >
-  </button>
+  />
 </template>
 
 <script>
@@ -41,11 +41,11 @@ export default {
   margin-left: 20px;
 }
 
-&::after {
+.ninth-button::after {
   content: attr(data-text);
 }
 
-&:hover::after {
+.ninth-button:hover::after {
   content: attr(data-text-hover); 
 }
 
