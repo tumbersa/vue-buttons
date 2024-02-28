@@ -39,64 +39,65 @@ export default {
   justify-content: center;
   margin-top: 20px;
   margin-left: 20px;
-}
 
-.ninth-button::after {
-  content: attr(data-text);
-}
+  &::after {
+    content: attr(data-text);
+  }
 
-.ninth-button:hover::after {
-  content: attr(data-text-hover); 
-}
+  &:hover::after {
+    content: attr(data-text-hover);
+  }
 
-&:not(.filled).primary {
-  background-color: rgb(51, 51, 51);
-  border-color: rgb(166, 88, 46);
-  color: rgb(166, 88, 46);
-}
+  &:not(.filled).primary {
+    background-color: rgb(51, 51, 51);
+    border-color: rgb(166, 88, 46);
+    color: rgb(166, 88, 46);
+  }
 
-&.filled.primary {
-  background-color: rgb(253, 106, 2);
-  border-color: rgb(253, 106, 2);
-  color: rgb(255, 255, 255);
-}
+  &.filled.primary {
+    background-color: rgb(253, 106, 2);
+    border-color: rgb(253, 106, 2);
+    color: rgb(255, 255, 255);
+  }
 
-&.filled:not(.primary) {
-  background-color: rgb(255, 255, 255);
-  border-color: rgb(255, 255, 255);
-  color: rgb(85, 85, 85);
-}
+  &.filled:not(.primary) {
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+    color: rgb(85, 85, 85);
+  }
 
-&:not(.filled):not(.primary) {
-  background-color: rgb(51, 51, 51);
-  border-color: rgb(68, 68, 68);
-  color: rgb(255, 255, 255);
-}
+  &:not(.filled):not(.primary) {
+    background-color: rgb(51, 51, 51);
+    border-color: rgb(68, 68, 68);
+    color: rgb(255, 255, 255);
+  }
 
-&:hover {
-  cursor: pointer;
-}
+  &:hover {
+    cursor: pointer;
+  }
 
-&:hover:not(.filled):not(.primary) {
-  background-color: rgb(51, 51, 51);
-  border-color: rgb(126, 126, 126);
-  color: rgb(255, 255, 255);
-}
-&:hover:not(.filled).primary {
-  background-color: rgb(253, 106, 2);
-  border-color: rgb(253, 106, 2);
-  color: rgb(255, 255, 255);
-}
+  &:hover:not(.filled):not(.primary) {
+    background-color: rgb(51, 51, 51);
+    border-color: rgb(126, 126, 126);
+    color: rgb(255, 255, 255);
+  }
 
-&:hover.filled:not(.primary) {
-  background-color: rgb(222, 222, 222);
-  border-color: rgb(222, 222, 222);
-  color: rgb(50, 50, 50);
-}
+  &:hover:not(.filled).primary {
+    background-color: rgb(253, 106, 2);
+    border-color: rgb(253, 106, 2);
+    color: rgb(255, 255, 255);
+  }
 
-&:hover.filled.primary {
-  background-color: rgb(51, 51, 51);
-  border-color: rgb(166, 88, 46);
-  color: rgb(166, 88, 46);
+  &:hover.filled:not(.primary) {
+    background-color: rgb(222, 222, 222);
+    border-color: rgb(222, 222, 222);
+    color: rgb(50, 50, 50);
+  }
+
+  &:hover.filled.primary {
+    background-color: rgb(51, 51, 51);
+    border-color: rgb(166, 88, 46);
+    color: rgb(166, 88, 46);
+  }
 }
 </style>
