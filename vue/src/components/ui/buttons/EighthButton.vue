@@ -1,6 +1,6 @@
 <template>
   <button 
-    class = "ninth-button"
+    class = "eighth-button"
     :class = "{ 'primary': type === 'primary', 'filled': fill }"
   >
     <slot>button</slot>
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: "NinthButton",
+  name: "EighthButton",
   props: {
     type: {
       type: String,
@@ -24,7 +24,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-.ninth-button {
+.eighth-button {
   height: 53px;
   width: 250px;
   border-width: 5px;
