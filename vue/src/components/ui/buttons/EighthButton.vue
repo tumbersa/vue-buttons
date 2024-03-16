@@ -4,7 +4,8 @@
     :class = "{ 'primary': type === 'primary', 'filled': fill }"
     @click="() => click()"
   >
-    <slot>button</slot>
+    button
+    <slot/>
   </button>
 </template>
 

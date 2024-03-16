@@ -1,23 +1,26 @@
 <template>
   <div class="button-8th-page">
     <EighthButton type="default" :fill="false" @click="() => increment('btn1')">
-    ({{ getCount.btn1 }})
+      ({{ getCount.btn1 }})
     </EighthButton>
+
     <EighthButton type="primary" :fill="false" @click="() => increment('btn2')">
-    ({{ getCount.btn2 }})
+      ({{ getCount.btn2 }})
     </EighthButton>
+
     <EighthButton type="default" :fill="true" @click="() => increment('btn3')">
-    ({{ getCount.btn3 }})
+      ({{ getCount.btn3 }})
     </EighthButton>
+
     <EighthButton type="primary" :fill="true" @click="() => increment('btn4')">
-    ({{ getCount.btn4 }})
+      ({{ getCount.btn4 }})
     </EighthButton>
   </div>
 </template>
 
 <script>
 import EighthButton from '@/components/ui/buttons/EighthButton.vue';
-import {mapActions, mapGetters} from "vuex";
+import { mapActions, mapGetters } from "vuex";
 
 export default {
   name: 'Button8thPage',
@@ -33,8 +36,8 @@ export default {
     ...mapActions('eighthButton', [
       'incrementButtonCount'
     ]),
-    increment (btnIndex) {
-      this.incrementButtonCount(btnIndex)
+    increment(btnKey) {
+      this.incrementButtonCount(btnKey)
     }
   }
 }
