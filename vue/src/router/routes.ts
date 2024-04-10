@@ -1,3 +1,4 @@
 export enum RouteNames {
-  HOME = "HOME"
+  HOME = "HOME",
+  BLOG_POHOMOVA_KAPUSTIN_HOME ="BLOG_POHOMOVA_KAPUSTIN_HOME",
 }
