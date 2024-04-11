@@ -1,22 +1,20 @@
 <template>
-    <PageLayout>
+    <div class="container">
         <HeaderPohomovaKapustin />
         <HatPohomovaKapustin />
-        <div class="season">
-            СЕЗОН 2023/24
+        <div class="albums_title">
+            Альбомы 2023/24
         </div>
-    </PageLayout>
+    </div>
 </template>
   
 <script>
-import PageLayout from "../../parts/PageLayout";
 import HeaderPohomovaKapustin from "./components/HeaderPohomovaKapustin.vue";
 import HatPohomovaKapustin from "./components/HatPohomovaKapustin.vue"
 
 export default {
     name: "BlogPohomovaKapustinHome",
     components: {
-        PageLayout,
         HeaderPohomovaKapustin,
         HatPohomovaKapustin
     }
@@ -25,8 +23,17 @@ export default {
   
 <style lang="less">
 body {
-    background-color: white;
+    background-color: black;
 }
 
+.container {
+    text-align: center; /* Центрирование содержимого по горизонтали */
+}
 
+.albums_title {
+    color: white;
+    font-family: "Lucida Handwriting", cursive;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
 </style>
