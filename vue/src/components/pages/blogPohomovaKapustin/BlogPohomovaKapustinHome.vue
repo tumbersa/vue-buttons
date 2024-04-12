@@ -5,29 +5,29 @@
         <div class="albums_title">
             Альбомы 2023/24
         </div>
+        <AlbumGrid />
     </div>
 </template>
-  
+
 <script>
-import HeaderPohomovaKapustin from "./components/HeaderPohomovaKapustin.vue";
+import HeaderPohomovaKapustin from "./components/HeaderPohomovaKapustin.vue"
 import HatPohomovaKapustin from "./components/HatPohomovaKapustin.vue"
+import AlbumGrid from './components/Album/AlbumGrid.vue'
 
 export default {
     name: "BlogPohomovaKapustinHome",
     components: {
         HeaderPohomovaKapustin,
-        HatPohomovaKapustin
+        HatPohomovaKapustin,
+        AlbumGrid
     }
 };
 </script>
   
 <style lang="less">
-body {
-    background-color: black;
-}
-
 .container {
-    text-align: center; /* Центрирование содержимого по горизонтали */
+    text-align: center;
+    background-color: black;
 }
 
 .albums_title {
