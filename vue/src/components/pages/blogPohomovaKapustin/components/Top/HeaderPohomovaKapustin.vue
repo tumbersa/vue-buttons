@@ -1,21 +1,11 @@
 <template>
   <div class="header">
-    <div class="header__logo">
       Небольшой блог об СНГ музыкантах
-    </div>
   </div>
 </template>
   
 <script>
-import { RouteNames } from "@/router/routes";
 
-export default {
-  computed: {
-    routeNames() {
-      return RouteNames
-    }
-  }
-}
 </script>
   
 <style scoped lang="less">
@@ -30,6 +20,5 @@ export default {
   font-family: "Lucida Handwriting", cursive;
   text-transform: uppercase;
   letter-spacing: 5px;
-
 }
 </style>

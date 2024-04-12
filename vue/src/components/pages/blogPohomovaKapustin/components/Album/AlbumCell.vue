@@ -1,10 +1,10 @@
 <template>
   <div class="album__container">
     <div class="artist">{{ album.artist }}</div>
-    <div class="image-container">
+    <div>
       <img :src="album.imageUrl" :alt="album.title" class="album__image" />
-      <div class="title">{{ album.title }}</div>
     </div>
+    <div class="title">{{ album.title }}</div>
   </div>
 </template>
 
@@ -25,7 +25,7 @@ export default {
 }
 
 .album__image {
-  width: 300px;
+  width: 200px;
   height: auto;
 }
 

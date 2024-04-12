@@ -2,24 +2,27 @@
     <div class="container">
         <HeaderPohomovaKapustin />
         <HatPohomovaKapustin />
-        <div class="albums_title">
-            Альбомы 2023/24
-        </div>
-        <AlbumGrid />
+        <AlbumTitle />
+        <AlbumList />
+        <MusicianGrid />
     </div>
 </template>
 
 <script>
-import HeaderPohomovaKapustin from "./components/HeaderPohomovaKapustin.vue"
-import HatPohomovaKapustin from "./components/HatPohomovaKapustin.vue"
-import AlbumGrid from './components/Album/AlbumGrid.vue'
+import HeaderPohomovaKapustin from "./components/Top/HeaderPohomovaKapustin.vue"
+import HatPohomovaKapustin from "./components/Top/HatPohomovaKapustin.vue"
+import AlbumTitle from './components/Album/AlbumTitle.vue'
+import AlbumList from './components/Album/AlbumList.vue'
+import MusicianGrid from './components/Musician/MusicianGrid.vue'
 
 export default {
     name: "BlogPohomovaKapustinHome",
     components: {
         HeaderPohomovaKapustin,
         HatPohomovaKapustin,
-        AlbumGrid
+        AlbumTitle,
+        AlbumList,
+        MusicianGrid
     }
 };
 </script>
@@ -28,12 +31,5 @@ export default {
 .container {
     text-align: center;
     background-color: black;
-}
-
-.albums_title {
-    color: white;
-    font-family: "Lucida Handwriting", cursive;
-    font-size: 30px;
-    letter-spacing: 5px;
 }
 </style>

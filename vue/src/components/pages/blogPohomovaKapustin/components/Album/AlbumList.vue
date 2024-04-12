@@ -37,7 +37,7 @@ export default {
                 { title: "Платина", artist: "Платина", imageUrl: "https://previews.dropbox.com/p/thumb/ACMvdcvjRHM-er5mQCnTAVxWQfOjxzRxwH7mg2J9e_pAR31VyUBv1mxNIyHx-Zrs65Um7SCVqZR43nd7uyrzNircFeGjU3c3rwcxzl_1a1FvG6aufLgaVlsXMrJgHz1IIwcNsOqQXeyRZUoKQYhFOPvAW87dTnUt45p-_QLqgiIuzoi3HIS53FrKsPAqgcyb1akK-P8m9lVY8vKmKrjKW4XuFVRk8sQP-YEvI_t4TwY5ZaQ8NNJqKzXe3131YHVrITR1zCZZ59kajnKR-G9PcLcInjTufe8XjokFlVOm_wcoe4zEcsgBOe0xRSGXIlNV0vON-1CKq2C6a5ZydswwnXma/p.png" },
                 { title: "Злачное Место", artist: "BOOKER", imageUrl: "https://previews.dropbox.com/p/thumb/ACNeW9ZdW9FpbEeewe4SJk6_l351IiJqqKgQjcZYjqj7_l7B8xfDEwAk7DMLuYestorJXKnbwRCRfYP4pPSoepE1fK37ThQmpNvJ2HYeTXQCMD9fAWaqqJ1kEZqPrOuVVHF3Mtzjusd4Zh-69K1EwPfs4LvhWFZwe80OVwc5cvTSDLUolELt7tD62CmVCfxPeLX1Lrugp1y3UfEoD6zCpZE7eLr1chTrqTWHswZo-Hc-xViyNh91TOGfnKR2SJKvoFdclDKWqZ5tIGuFiWaSjxK0DER3pODrtE40-jBUK-rvj30ZUDWbAJJqrPhSqk1CX-iIzBKF0kwhygit9_6G71B1/p.png" }
             ],
-            scrollAmount: 320, // Adjust as needed
+            scrollAmount: 220,
             currentIndex: 0
         };
     },
@@ -73,7 +73,7 @@ export default {
 
 .album-row {
     display: inline-flex;
-    width: calc(300px * 5 + 20px * 4);
+    width: calc(200px * 5 + 20px * 4);
     gap: 20px;
     z-index: 1;
 }
