@@ -1,6 +1,6 @@
 <template>
   <div class="musician-cell">
-    <img :src="musician.imageUrl" :alt="musician.name" class="album__image" @click="viewMusicianDetails(musician)"/>
+    <img :src="musician.imageUrl" :alt="musician.name" class="musician__image" @click="viewMusicianDetails(musician)"/>
     <div class="info">
       <div class="name">
         <img :src="imgNameSrc" :alt="imgName" class="img__name" />
@@ -35,7 +35,7 @@ export default {
   },
   methods: {
     viewMusicianDetails(musician) {
-      this.$router.push({ name: RouteNames.DETAIL_MUSICIAN_PK, params: { musician: musician}});
+      this.$router.push({ name: RouteNames.DETAIL_MUSICIAN_PK, params: { id: musician.id}});
     }
   },
   computed: {
@@ -61,7 +61,7 @@ export default {
   align-items: center;
 }
 
-.album__image {
+.musician__image {
   width: 200px;
   height: 200px;
   margin-right: 10px;

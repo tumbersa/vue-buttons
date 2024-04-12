@@ -19,7 +19,7 @@ const routes = [
     component: BlogPohomovaKapustinHome
    },
    {
-    path: '/blog_detail_musician_pk',
+    path: '/blog_detail_musician_pk/:id',
     name: RouteNames.DETAIL_MUSICIAN_PK,
     component: DetailMusicianPK
    }
