@@ -1,5 +1,5 @@
 import modals from './modals'
-import StorePohomovaKapustin from './storeBlogPohomovaKapustin/StorePohomovaKapustin'
+import StorePohomovaKapustin from '@/store/storeBlogPohomovaKapustin/StorePohomovaKapustin.js'
 
 export default {
   namespaced: true,

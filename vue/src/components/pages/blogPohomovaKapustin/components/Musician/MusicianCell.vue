@@ -66,6 +66,7 @@ export default {
   height: 200px;
   margin-right: 10px;
   border-radius: 15px;
+  cursor: pointer;
 }
 
 .info {
