@@ -5,6 +5,7 @@
         <AlbumTitle />
         <AlbumList />
         <MusicianGrid />
+        <FooterPK />
     </div>
 </template>
 
@@ -14,6 +15,7 @@ import HatPohomovaKapustin from "./components/Top/HatPohomovaKapustin.vue"
 import AlbumTitle from './components/Album/AlbumTitle.vue'
 import AlbumList from './components/Album/AlbumList.vue'
 import MusicianGrid from './components/Musician/MusicianGrid.vue'
+import FooterPK from './components/Bottom/FooterPK.vue'
 
 export default {
     name: "BlogPohomovaKapustinHome",
@@ -22,7 +24,8 @@ export default {
         HatPohomovaKapustin,
         AlbumTitle,
         AlbumList,
-        MusicianGrid
+        MusicianGrid,
+        FooterPK
     }
 };
 </script>
