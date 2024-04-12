@@ -32,16 +32,19 @@ export default {
 .artist {
   font-family: "Verdana";
   color: white;
-  font-size: 23px;
-  overflow-wrap: break-word; 
-  max-width: 300px; 
+  font-size: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: clip;
+  max-width: 200px; 
+  padding-bottom: 10px;
 }
 
 .title {
   font-family: "Verdana";
   color: lightgray;
-  font-size: 23px;
+  font-size: 20px;
   overflow-wrap: break-word; 
-  max-width: 300px; 
+  max-width: 200px; 
 }
 </style>

@@ -51,7 +51,7 @@ export default {
     font-family: "Lucida Handwriting", cursive;
     font-size: 30px;
     text-align: left;
-    letter-spacing: 5px;
+    white-space: nowrap;
     margin-left: 10%;
     margin-bottom: 20px;
     margin-top: 40px;
