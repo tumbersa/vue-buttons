@@ -1,6 +1,6 @@
 <template>
   <div class="musician-cell">
-    <img :src="musician.imageUrl" :alt="musician.name" class="album__image" />
+    <img :src="musician.imageUrl" :alt="musician.name" class="album__image" @click="viewMusicianDetails(musician)"/>
     <div class="info">
       <div class="name">
         <img :src="imgNameSrc" :alt="imgName" class="img__name" />
@@ -24,12 +24,18 @@
 
 <script>
 import { imgNameSrc, imgAgeSrc, imgGenreSrc, imgListenersSrc } from '@/components/pages/blogPohomovaKapustin/constantsPK.js';
+import { RouteNames } from '@/router/routes';
 
 export default {
   props: {
     musician: {
       type: Object,
       required: true
+    }
+  },
+  methods: {
+    viewMusicianDetails(musician) {
+      this.$router.push({ name: RouteNames.DETAIL_MUSICIAN_PK, params: { musician: musician}});
     }
   },
   computed: {
