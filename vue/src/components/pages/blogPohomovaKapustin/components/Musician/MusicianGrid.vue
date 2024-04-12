@@ -2,9 +2,10 @@
     <div>
         <div class="title">
             Исполнители
+            <input v-model="searchQuery" class="search-input" placeholder="Поиск по имени" />
         </div>
         <div class="grid-container">
-            <MusicianCell v-for="(musician, index) in musicians" :key="index" :musician="musician" />
+            <MusicianCell v-for="(musician, index) in filteredMusicians" :key="index" :musician="musician" />
         </div>
     </div>
 </template>
@@ -17,6 +18,7 @@ export default {
     },
     data() {
         return {
+            searchQuery: '',
             musicians: [
                 { name: "D.K.", age: "27", genre: "rave", listenersPerMonth: "414 314", imageUrl: "https://previews.dropbox.com/p/thumb/ACPrF3SJGolcXh27UgDJQv5Gfqv8V8k4uMAyA2D8UpdoUpKebhwOuhs_LB0A3rf1wQe249RhGmLPza-WPLWaBq7dtQiCXIHfd6RM-uoZxd5bCyFLIhmzkD4KAhBSQOmyqh2_ezspM2zudv-4w9FI0Imb4E-ymIFBny2039gJ1C96d9yWXY9hzJv61iSpacNn2ebWohvmmm7948sEaQ8IRM_-tG1TaD7AlSubQ_qfvyZ63Q-sLOs8ir4jjuo7k2HpukUCKo3JBb2yFgNiWC6aQTDL_Vrl0HrGOl41yxgOmfEM0VgmlnZpOPV3lNC_dl2wH5R7z8n8QvrVEtodKJyYN0H-/p.jpeg" },
                 { name: "Boulevard Depo", age: "32", genre: "rap", listenersPerMonth: "1 604 753", imageUrl: "https://previews.dropbox.com/p/thumb/ACPoErkHaxeLGAMnagpfzDz_ay38kSsdV5MrXXaHWYpRZ4cgVaG7K7KiC7kX_xT_KLv-i1V-aBJDNAWJTrOzttUkfWSXLdgqk8Td8-Os8a3PQHAdugkOjg7V5qj5mXwuz_SLzarabGWpdalxLXOOYoUuHN8tlqoHOcyX-MFmqkEaOfn-3pFsw9RvkEOn-0fchTty_s_pYsX09OuprB_BiVZlryMDlbrrfZwsw2obKyI2LhaARHLeA5BpKFlUr1vEuT7a06ndkmx7XoUldoWT0Uo_6nOBcMOFW5nCYB7CyTxBFCD9zLunsKbqs5tlD54X2cWhBZbJd2EoUfp_zY1MmxHj/p.jpeg" },
@@ -41,6 +43,13 @@ export default {
                 { name: "Молодой Платон", age: "19", genre: "rap", listenersPerMonth: "2 891 854", imageUrl: "https://previews.dropbox.com/p/thumb/ACO0GS4mQ_7fXfOFmOpDJIOLP8pBqBTs10Li6cZQcps1MosuHxuKaLFruEfRL7dyDNzFdhP7xoBSTwl8_0ImxGNC60JAc_nDGbVkhxkBrEVx0HhUNQDrhCVRA1Ai6s31vdvs6Q5tHrwA2SQ89UVJ6euEjxXg6QXVpN2Z5THR6-dPFyAyyrP0SjX00EibWW4o676txwn1sW4HcomUIK67ekmYmoRK0zNCKUjcoYyu37YTgoQ3iJ7eab_yltfrHSB9UL2dBD7L9vGBLOt3HJOSfj44T9VXvhrT7qvcteEAhrhZJG2sHdiTLexH2YdqI9olqvSyNiQ1LZtX_2pUPS3zv7Qz/p.jpeg" },
             ]
         }
+    },
+    computed: {
+        filteredMusicians() {
+            return this.musicians.filter(musician => {
+                return musician.name.toLowerCase().includes(this.searchQuery.toLowerCase());
+            });
+        }
     }
 }
 </script>
@@ -64,4 +73,16 @@ export default {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
+
+.search-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 10px;
+    background-color: black;
+    color: white;
+}
+
+
 </style>
