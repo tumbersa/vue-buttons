@@ -60,6 +60,7 @@ export default {
 .grid-container {
     display: grid;
     margin-left: 10%;
+    padding-bottom: 40px;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
